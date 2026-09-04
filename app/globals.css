@@ -79,6 +79,16 @@ h2 { max-width: 620px; margin: 0; font-size: clamp(2rem, 4.2vw, 4rem); line-heig
 .skill-item { display: flex; align-items: baseline; gap: 1rem; padding: 1.2rem 0; border-bottom: 1px solid var(--border); }
 .skill-item span { color: var(--primary); font: .65rem 'IBM Plex Mono', monospace; }
 .skill-item strong { font-size: 1rem; }
+.projects-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin-top: 3.5rem; background: var(--border); border: 1px solid var(--border); }
+.project-card { min-height: 285px; padding: 1.5rem; display: flex; flex-direction: column; background: var(--card); transition: background .2s ease, transform .2s ease; }
+.project-card:hover { background: var(--signal); transform: translateY(-4px); }
+.project-card-top { display: flex; justify-content: space-between; gap: 1rem; color: var(--muted-foreground); font: .64rem 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .08em; }
+.project-number { color: var(--primary); }
+.project-card h3 { margin: 3.5rem 0 .75rem; font-size: clamp(1.55rem, 3vw, 2.35rem); line-height: 1; letter-spacing: -.05em; }
+.project-card p { max-width: 360px; margin: 0; color: var(--ink-soft); line-height: 1.6; }
+.project-link { display: inline-flex; align-items: center; gap: .45rem; width: fit-content; margin-top: auto; padding-top: 2rem; color: var(--primary); font: 700 .72rem 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .06em; }
+.project-link:hover { color: var(--foreground); }
 .experience-block h2 { max-width: 760px; }
 .experience-note { max-width: 650px; margin-top: 2.5rem; padding: 1.25rem; border-left: 3px solid var(--signal); background: var(--card); color: var(--ink-soft); line-height: 1.6; }
 .education-list { border-top: 1px solid var(--border); }
@@ -110,7 +120,9 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.25rem; display: flex; jus
   h1 { font-size: clamp(3.4rem, 17vw, 6rem); }
   .section, .contact-section { grid-template-columns: 1fr; gap: 2.5rem; padding-top: 4rem; padding-bottom: 4rem; }
   .section-label { gap: .6rem; }
-  .split-content { grid-template-columns: 1fr; gap: 1rem; }
+  .split-content, .projects-intro { grid-template-columns: 1fr; gap: 1rem; }
+  .project-grid { grid-template-columns: 1fr; margin-top: 2.5rem; }
+  .project-card { min-height: 250px; }
   .skill-list { grid-template-columns: 1fr; }
   .education-item { grid-template-columns: 1fr; gap: .5rem; }
   .contact-content h2 { font-size: clamp(3.1rem, 16vw, 6rem); }
